@@ -662,7 +662,7 @@ int AnaylsisMainDlg::Read_SystemEnvironment(HWND hMainDlg, std::vector<wstring>*
 
 		while (szSysEnvTok)
 		{
-			if (NULL == StrStrIW(szSysEnvTok, L"softcamp"))
+			if (NULL == StrStrIW(szSysEnvTok, L"------"))			// 보안 문제로 기존 문자열에서 "------" 문자열로 대체
 			{
 				pSystemEnv->push_back(szSysEnvTok);
 			}
